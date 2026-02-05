@@ -1,6 +1,6 @@
 /* ===============================
    TFRAC Homepage css
-   =============================== */
+=============================== */
 
 /* -------------------------
    Colour choices
@@ -61,7 +61,7 @@ a {
 
 /* --------------------------
    Layout helper - containers
-   --------------------------*/
+--------------------------*/
 
 /*container will never be wider than 1120px will shrink to fit mpbile*/
 .container {
@@ -71,7 +71,7 @@ a {
 }
 
 /* =================================================
-navigation - red pill links
+    navigation - red pill links
 ================================================= */
 
 .nav { display: flex; 
@@ -94,7 +94,7 @@ navigation - red pill links
         border-radius: 999px; }
 
 /* =================================================
-Header phone number and enquire 
+    Header phone number and enquire 
 ================================================= */ 
 /*puts phone number and header side by side*/ 
 .header__cta { 
@@ -154,4 +154,56 @@ Header phone number and enquire
     margin: 0 0 16px 0; 
     font-size: 48px; 
     font-weight: 700; 
+}
+
+/* ============================= 
+    Service cards 
+============================== */
+/*baclground colour*/
+.services { 
+    background: var(--primary-fire); 
+    padding-top: 64px; 
+    padding-bottom: 64px; 
+}
+/*title colour, fixed values - no scaling*/
+.services__title { 
+    margin: 0 0 32px 0; 
+    color: #ffffff; 
+    font-size: 52px; 
+    font-weight: 700; 
+}
+
+/* Cards - lay them out in a grid*/
+.services__grid { 
+    display: grid; 
+    grid-template-columns: 1fr; /*one column*/ 
+    gap: 24px; 
+}
+
+/*each card*/
+.service-card { 
+    background: #ffffff; 
+    padding: 24px; 
+}
+/*sets the icon - i think ive done something wrong here?*/
+.service-card__icon { 
+    width: 44px; 
+    height: 44px; 
+    margin-bottom: 16px; }
+
+/*spacing font and weight*/
+.service-card__title{
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.service-card__text {
+    margin:0;
+}
+/*responsive layout - the grid will become 4 columns*/
+@media (min-width:768px) {
+    .services__grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
