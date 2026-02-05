@@ -69,4 +69,27 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-/* commit-3 test */
+
+/* =================================================
+   navigation - red outlined pill links
+   ================================================= */
+
+.nav { display: flex; 
+    gap: 4px; /* display in row with spec spacing */ 
+    justify-self: center; } 
+    
+    /*pill shape for nav*/ 
+    .nav__link { 
+        height: 37px; 
+        padding-left: 14px; 
+        padding-right: 14px; 
+        display: inline-flex; 
+        align-items: center; 
+        justify-content: center; 
+        font-size: 15px; 
+        font-weight: 600; 
+        color: var(--primary-fire); 
+        background: transparent; 
+        border: 1px solid var(--primary-fire); 
+        border-radius: 999px; }
+
