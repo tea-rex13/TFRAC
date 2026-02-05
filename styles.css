@@ -110,30 +110,48 @@ Header phone number and enquire
     Buttons 
 ===================== */ 
     
-    .btn { 
-        display: inline-flex; 
-        align-items: center; /*aligning content*/ 
-        gap: 10px; 
-        font-weight: 600; 
-        border-radius: 400px; /*rounded corners*/ } 
+.btn { 
+    display: inline-flex; 
+    align-items: center; /*aligning content*/ 
+    gap: 10px; 
+    font-weight: 600; 
+    border-radius: 400px; /*rounded corners*/ } 
         
     /* Header enquire button */ 
-    .btn--header { height: 37px; 
-        padding-top: 10px; 
-        padding-bottom: 10px; 
-        padding-left: 24px; 
-        padding-right: 24px; 
-        background: var(--primary-fire); 
-        color: #ffffff; border: none; 
+.btn--header { 
+    height: 37px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    padding-left: 24px; 
+    padding-right: 24px; 
+    background: var(--primary-fire); 
+    color: #ffffff; border: none; 
     } 
     /* hero enquire button matche header */ 
-    .btn--hero { 
-        height: 52px; 
-        padding-top: 10px; 
-        padding-bottom: 10px; 
-        padding-left: 32px; 
-        padding-right: 32px; 
-        background: var(--primary-fire); 
-        color: #ffffff; 
-        border: 1px solid var(--primary-white-smoke); 
-    }
+.btn--hero { 
+    height: 52px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    padding-left: 32px; 
+    padding-right: 32px; 
+    background: var(--primary-fire); 
+    color: #ffffff; 
+    border: 1px solid var(--primary-white-smoke); 
+}
+
+/* ==================================== 
+    Hero 
+=============================== */ 
+.hero { 
+    background-image: url("assets/hero-background.svg"); /*image from figma*/ 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; /*one appear once*/ 
+    color: #ffffff; /*text colour*/ 
+} 
+/*font size weight and spacing below heading fixed size*/ 
+.hero__copy h1 { 
+    margin: 0 0 16px 0; 
+    font-size: 48px; 
+    font-weight: 700; 
+}
