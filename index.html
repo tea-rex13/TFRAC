@@ -3,58 +3,148 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Page title -->
   <title>TFRAC</title>
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <!-- Site header: logo and primary navigation -->
   <header class="site-header">
     <div class="container header__inner">
+      <!-- Company name / logo -->
       <a class="logo" href="#">The Fire Risk Assessment Company</a>
 
+      <!-- Main navigation -->
       <nav class="nav" aria-label="Primary navigation">
         <a class="nav__link" href="#services">Services</a>
         <a class="nav__link" href="#accreditations">Accreditations</a>
         <a class="nav__link" href="#team">Meet the Team</a>
         <a class="nav__link" href="#faqs">FAQs</a>
         <a class="nav__link" href="#reviews">Reviews</a>
-        <p>Call +44 (0)20 2222 2222</p>
-        <a class="nav_link" href="#enquire">Enquire</a>
+        <!-- Contact phone number -->
+        <p class="nav__phone">Call +44 (0)20 2222 2222</p>
+        <!-- Enquiry call to action -->
+        <a class="nav__link" href="#enquire">Enquire</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- Hero section -->
     <section class="hero">
       <div class="container hero__inner">
         <div class="hero__copy">
           <h1>Your Partners in Fire Safety and Compliance</h1>
-          <p>We are a fire safety consultancy, providing a broad scope of fire risk 
-            assessments, fire strategy documents, door surveys, and consultation. </p>
+
+          <p>
+            We are a fire safety consultancy, providing a broad scope of fire risk assessments,
+            fire strategy documents, door surveys, and consultation.
+          </p>
+
+          <p>
+            We are based in two locations, Sussex and Somerset, and provide services throughout
+            England and Wales. Our fire risk assessments are undertaken by tier 3 members of the
+            Institute of Fire Safety Managers (IFSM), ie nationally accredited fire risk assessors
+            (NAFRAR).
+          </p>
+
+          <!-- Primary hero action -->
           <div class="hero__actions">
-            <div class="hero__copy">
-          
-          <p>We are based in two locations, Sussex and Somerset, and provide 
-            services throughout England and Wales. Our fire risk assessments are 
-            undertaken by tier 3 members of the Institute of Fire Safety Managers (IFSM) i.e. nationally accredited fire risk assessors (NAFRAR) </p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#">Enquire</a>
-            
+            <a class="btn btn--primary" href="#enquire">Enquire</a>
           </div>
         </div>
-        <div class="hero__media">
-          <img src="assets/hero.png" alt="" />
+    </section>
+
+    <!-- Services section -->
+    <section class="services" id="services">
+      <div class="container">
+
+        <!-- Services heading -->
+        <div class="services__header">
+          <h2 class="services__title">Our Services</h2>
+        </div>
+
+        <!-- Services grid -->
+        <div class="services__grid">
+
+          <!-- Service card: Fire Risk Assessments -->
+          <div class="service-card">
+            <img
+              class="service-card__icon"
+              src="assets/icons/fire-risk.svg"
+              alt=""
+            />
+            <h3 class="service-card__title">Fire Risk Assessments</h3>
+            <p class="service-card__text">
+              Lorem ipsum dolor sit amet consectetur.
+              Mattis maecenas enim ultrices felis ullamcorper. Euismod enim adipiscing tincidunt elit sit massa arcu.
+            </p>
+          </div>
+
+          <!-- Service card: Fire Strategies -->
+          <div class="service-card">
+            <img
+              class="service-card__icon"
+              src="assets/icons/fire-strategies.svg"
+              alt=""
+            />
+            <h3 class="service-card__title">Fire Strategies</h3>
+            <p class="service-card__text">
+              Lorem ipsum dolor sit amet consectetur.
+              Mattis maecenas enim ultrices felis ullamcorper.
+              Euismod enim adipiscing tincidunt elit sit massa arcu.
+            </p>
+          </div>
+
+          <!-- Service card: Fire Door Surveys -->
+          <div class="service-card">
+            <img
+              class="service-card__icon"
+              src="assets/icons/fire-door.svg"
+              alt=""
+            />
+            <h3 class="service-card__title">Fire Door Surveys</h3>
+            <p class="service-card__text">
+              Lorem ipsum dolor sit amet consectetur.
+              Mattis maecenas enim ultrices felis ullamcorper.
+              Euismod enim adipiscing tincidunt elit sit massa arcu.
+            </p>
+          </div>
+
+          <!-- Service card: High Rise Building Safety Reports -->
+          <div class="service-card">
+            <img
+              class="service-card__icon"
+              src="assets/icons/high-rise.svg"
+              alt=""
+            />
+            <h3 class="service-card__title">High Rise Building Safety Reports</h3>
+            <p class="service-card__text">
+              Lorem ipsum dolor sit amet consectetur.
+              Mattis maecenas enim ultrices felis ullamcorper.
+              Euismod enim adipiscing tincidunt elit sit massa arcu.
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Site footer -->
   <footer class="site-footer">
     <div class="container">
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Privacy</a>
-        <a href="#">Important info</a>
-      <p>© 2025 The Fire Risk Assessment Company. TFRAC is authorised and regulated in the UK by lorem ipsum officae. Registered in England No. 01234567.</p>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Privacy</a>
+      <a href="#">Important info</a>
+
+      <!-- Legal and company information -->
+      <p>
+        © 2025 The Fire Risk Assessment Company. TFRAC is authorised and regulated in the UK by lorem
+        ipsum officae. Registered in England No. 01234567.
+      </p>
     </div>
   </footer>
 </body>
