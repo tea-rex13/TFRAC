@@ -4,7 +4,7 @@
 
 /* -------------------------
    Colour choices
-   ------------------------- */
+ ------------------------- */
 
 :root {
   /* Primary */
@@ -25,7 +25,7 @@
 
 /* -------------------------
    remove browser defaults
-   ------------------------- */
+------------------------- */
 
 /*create predictable layout*/
 * {
@@ -71,8 +71,8 @@ a {
 }
 
 /* =================================================
-   navigation - red outlined pill links
-   ================================================= */
+navigation - red pill links
+================================================= */
 
 .nav { display: flex; 
     gap: 4px; /* display in row with spec spacing */ 
@@ -93,3 +93,47 @@ a {
         border: 1px solid var(--primary-fire); 
         border-radius: 999px; }
 
+/* =================================================
+Header phone number and enquire 
+================================================= */ 
+/*puts phone number and header side by side*/ 
+.header__cta { 
+    display: flex; 
+    align-items: center; 
+    gap: 16px; } 
+    
+.header__phone { 
+    margin: 0; 
+    color: var(--primary-fire); 
+    font-weight: 600; } 
+/* ===================== 
+    Buttons 
+===================== */ 
+    
+    .btn { 
+        display: inline-flex; 
+        align-items: center; /*aligning content*/ 
+        gap: 10px; 
+        font-weight: 600; 
+        border-radius: 400px; /*rounded corners*/ } 
+        
+    /* Header enquire button */ 
+    .btn--header { height: 37px; 
+        padding-top: 10px; 
+        padding-bottom: 10px; 
+        padding-left: 24px; 
+        padding-right: 24px; 
+        background: var(--primary-fire); 
+        color: #ffffff; border: none; 
+    } 
+    /* hero enquire button matche header */ 
+    .btn--hero { 
+        height: 52px; 
+        padding-top: 10px; 
+        padding-bottom: 10px; 
+        padding-left: 32px; 
+        padding-right: 32px; 
+        background: var(--primary-fire); 
+        color: #ffffff; 
+        border: 1px solid var(--primary-white-smoke); 
+    }
