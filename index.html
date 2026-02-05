@@ -14,7 +14,14 @@
   <header class="site-header">
     <div class="container header__inner">
       <!-- Company name / logo -->
-      <a class="logo" href="#">The Fire Risk Assessment Company</a>
+      <a class="logo" href="#" aria-label="The Fire Risk Assessment Company">
+  <img
+    class="logo__img"
+    src="assets/company-logo.svg"
+    alt="The Fire Risk Assessment Company"
+  >
+</a>
+
 
       <!-- Main navigation -->
       <nav class="nav" aria-label="Primary navigation">
@@ -23,11 +30,14 @@
         <a class="nav__link" href="#team">Meet the Team</a>
         <a class="nav__link" href="#faqs">FAQs</a>
         <a class="nav__link" href="#reviews">Reviews</a>
-        <!-- Contact phone number -->
-        <p class="nav__phone">Call +44 (0)20 2222 2222</p>
-        <!-- Enquiry call to action -->
-        <a class="nav__link" href="#enquire">Enquire</a>
       </nav>
+       <!-- Header CTA -->
+      <div class="header__cta">
+        <p class="header__phone">Call +44 (0)20 2222 2222</p>
+        <a class="btn btn--header" href="#enquire">
+          Enquire <span class="btn__arrow">→</span>
+        </a>
+      </div>
     </div>
   </header>
 
@@ -52,7 +62,9 @@
 
           <!-- Primary hero action -->
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#enquire">Enquire</a>
+           <a class="btn btn--hero" href="#enquire">
+            Enquire <span class="btn__arrow">→</span>
+          </a>
           </div>
         </div>
     </section>
