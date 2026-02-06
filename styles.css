@@ -47,7 +47,7 @@ body {
   background: #ffffff;
 }
 
-/*making images behave lie blocks*/
+/*making images behave like blocks*/
 img {
   display: block;
   max-width: 100%;
@@ -77,13 +77,42 @@ Header - top bar stuff
   background: #ffffff;
   padding: 16px 0; /* overall header padding */ 
 }
+/*header row alignment*/
 .header__inner { 
     display: grid; 
-    grid-template-columns: auto auto auto; 
+    grid-template-columns: auto 1fr auto; 
     align-items: center; 
     column-gap: 2rem; 
     padding-top: 16px; 
     padding-bottom: 16px; 
+    justify-content: space-between;
+}
+/* no padding on logo */
+.logo{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+/*prevent logo from shrinking*/
+.logo__img {
+    height: 43px;
+    width: 309.426px;
+    max-width: none;
+    display: block;
+    flex-shrink: 0;
+}
+.nav__link,
+.header__phone{
+    white-space: nowrap;
+}
+/* If the phone + button are at the end, treat them as aligned items */
+.header__phone {
+  display: inline-flex;
+  align-items: center;
+  line-height: 24px;   /* matches Figma label height */
+  text-decoration: none;
+  color: var(--primary-eerie-black);
 }
 /* =================================================
     navigation - red pill links
@@ -91,7 +120,8 @@ Header - top bar stuff
 
 .nav {
   display: flex;
-  gap: 4px; /* display in row with spec spacing */ 
+  gap: 16px; /* display in row with spec spacing */ 
+  flex-wrap: nowrap; /*keep on one line*/
 } 
     
 /*pill shape for nav*/ 
@@ -131,7 +161,9 @@ Header - top bar stuff
 .header__phone { 
     margin: 0; 
     color: var(--primary-fire); 
-    font-weight: 600; } 
+    font-weight: 600; 
+    white-space: nowrap; /*stopping phone no from stacking*/
+} 
 /* ===================== 
     Buttons 
 ===================== */ 
@@ -163,7 +195,7 @@ Header - top bar stuff
     border-radius: 400px;
     background: var(--primary-fire, #DD1212);   
     } 
-    /* hero enquire button matches header */ 
+    /* hero enquire button */ 
 .btn--hero { 
     display: flex;
     width: 282px;
@@ -179,19 +211,70 @@ Header - top bar stuff
 /* ==================================== 
     Hero 
 =============================== */ 
-.hero { 
-    background-image: url("assets/hero-background.svg"); /*image from figma*/ 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; /*one appear once*/ 
-    color: #ffffff; /*text colour*/ 
-} 
+.hero {
+  position: relative;
+  background-image: url("assets/hero-background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+
+  min-height: 900px;
+  padding: 6rem 0;
+}
+/*cap on smaller screens*/
+@media (max-height: 900px) {
+  .hero {
+    min-height: auto;
+  }
+}
+
+
+
 /*font size weight and spacing below heading fixed size*/ 
 .hero__copy h1 { 
     margin: 0 0 16px 0; 
     font-size: 48px; 
     font-weight: 700; 
 }
+
+.hero__lead {
+  margin: 0;
+  color: var(--primary-white-smoke);
+
+  /* large body */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 177.778% */
+}
+
+.hero__supporting {
+  margin: 0;
+  color: var(--primary-white-smoke);
+
+  /* medium body */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+.hero__text {
+  display: grid;
+
+  /* exact Figma column widths */
+  grid-template-columns: 402px 559px;
+
+  /* exact gap between the two text blocks */
+  column-gap: 24px;
+
+  align-items: start;
+
+  /* spacing relative to heading and button */
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
 
 /* ============================= 
     Service cards 
@@ -200,7 +283,8 @@ Header - top bar stuff
 .services { 
     background: var(--primary-fire); 
     padding-top: 64px; 
-    padding-bottom: 64px; 
+    padding-bottom: 64px;
+    margin-top: 0;
 }
 /*title colour, fixed values - no scaling*/
 .services__title { 
