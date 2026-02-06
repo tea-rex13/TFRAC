@@ -102,18 +102,18 @@ Header - top bar stuff
     display: block;
     flex-shrink: 0;
 }
-.nav__link,
-.header__phone{
-    white-space: nowrap;
-}
-/* If the phone + button are at the end, treat them as aligned items */
+
+
 .header__phone {
   display: inline-flex;
   align-items: center;
-  line-height: 24px;   /* matches Figma label height */
-  text-decoration: none;
-  color: var(--primary-eerie-black);
+  margin: 0;
+  color: var(--primary-fire);
+  font-weight: 600;
+  line-height: 24px;
+  white-space: nowrap;
 }
+
 /* =================================================
     navigation - red pill links
 ================================================= */
@@ -246,7 +246,7 @@ Header - top bar stuff
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 32px; /* 177.778% */
+  line-height: 32px; 
 }
 
 .hero__supporting {
@@ -257,7 +257,7 @@ Header - top bar stuff
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
+  line-height: 24px; 
 }
 .hero__text {
   display: grid;
@@ -273,6 +273,13 @@ Header - top bar stuff
   /* spacing relative to heading and button */
   margin-top: 24px;
   margin-bottom: 32px;
+}
+/*stacking for mobile*/
+@media (max-width: 900px) {
+  .hero__text {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
 }
 
 
@@ -327,4 +334,81 @@ Header - top bar stuff
     .services__grid{
         grid-template-columns: repeat(4, 1fr);
     }
+}
+
+/* ============================= 
+    Accreditations 
+============================== */
+
+.accreditations {
+  background: #ffffff;
+  padding: 32px 0;
+}
+
+.accreditations__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  gap: 32px;
+
+  /* Make as many columns as will fit */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  align-items: center;
+}
+
+.accreditations__item {
+  display: flex;
+  justify-content: center;
+}
+
+/* Card: keep the padding + radius from Figma, but allow it to shrink */
+.accreditations__card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 273px;     /* Figma overall width */
+  min-height: 176px;    /* Figma overall height */
+  padding: 32px;
+
+  background: #ffffff;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Makes the white box visible on white */
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Logo sizing stays consistent */
+.accreditations__img {
+  max-width: 209px;
+  max-height: 112px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.header__phone {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  color: var(--primary-fire);
+  font-weight: 600;
+  line-height: 24px;
+  white-space: nowrap;
+}
+/*checkatrade accreditation*/
+.accreditations__checkatrade {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.accreditations__checkatrade-img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
