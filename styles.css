@@ -341,21 +341,42 @@ Header - top bar stuff
 ============================== */
 
 .accreditations {
-  background: #ffffff;
-  padding: 32px 0;
+  background: var(--primary-white-smoke);
+  padding: 0; /*target height from figma*/
+  min-height: 436px;
+  display: flex;
 }
 
+
+.accreditations__full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* override the container width for this one section only */
+.accreditations .container {
+  width: min(100% - 2rem, 1440px);
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centres vertically inside the 436px section */
+  align-items: center;     /* centres horizontally */
+  gap: 32px;               /* space between logos row and Checkatrade */
+}
+
+/*fits list as 6 across*/
 .accreditations__list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 32px;
   list-style: none;
   margin: 0;
   padding: 0;
-
-  display: grid;
-  gap: 32px;
-
-  /* Make as many columns as will fit */
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  align-items: center;
+  justify-content: center;
 }
 
 .accreditations__item {
@@ -363,13 +384,11 @@ Header - top bar stuff
   justify-content: center;
 }
 
-/* Card: keep the padding + radius from Figma, but allow it to shrink */
+/* Cards should be the small rectangles */
 .accreditations__card {
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 273px;     /* Figma overall width */
-  min-height: 176px;    /* Figma overall height */
-  padding: 32px;
+  width: 209px;
+  height: 112px;
+  padding: 11px 40px 11px 39px;
 
   background: #ffffff;
   border-radius: 4px;
@@ -378,18 +397,16 @@ Header - top bar stuff
   align-items: center;
   justify-content: center;
 
-  /* Makes the white box visible on white */
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* Logo sizing stays consistent */
+/* Make the logo fill the rectangle */
 .accreditations__img {
-  max-width: 209px;
-  max-height: 112px;
-  width: 100%;
-  height: auto;
+  width: 130px;
+  height: 90px;
   object-fit: contain;
 }
+
 
 .header__phone {
   display: inline-flex;
@@ -404,11 +421,11 @@ Header - top bar stuff
 .accreditations__checkatrade {
   display: flex;
   justify-content: center;
-  margin-top: 24px;
+  
 }
 
 .accreditations__checkatrade-img {
-  height: 40px;
-  width: auto;
-  display: block;
+  width: 158px;
+  height: 45px;
+  object-fit: contain;
 }
